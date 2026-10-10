@@ -1,33 +1,85 @@
-# Power BI – E-Commerce Sales Dashboard
+# E-Commerce Data Warehouse & Power BI Dashboard
 
-This folder contains the Power BI report developed to analyze e-commerce sales performance using the E-Commerce Data Warehouse.
+## Project Overview
 
-## Dashboard Features
+This project focuses on building an end-to-end E-Commerce Data Warehouse using Microsoft SQL Server and creating an interactive Power BI dashboard to analyze sales performance.
 
-* **Total Revenue:** Analyzes recorded sales revenue.
-* **Total Quantity:** Measures the total recorded quantity sold.
-* **Total Orders:** Counts distinct invoices.
-* **Revenue by Country:** Compares revenue across countries.
-* **Revenue by Product:** Identifies products and items with the highest recorded revenue.
-* **Revenue Over Time:** Tracks revenue trends over time.
-* **Interactive Slicers:** Allows users to filter the report by date and country.
+The project transforms raw e-commerce transaction data into a structured data warehouse using a Star Schema, making the data easier to analyze and visualize.
 
-## Data Model
+## Project Objectives
 
-The report uses a Star Schema consisting of:
+* Load raw e-commerce data into SQL Server.
+* Design and implement a Star Schema.
+* Create dimension and fact tables.
+* Perform data validation using SQL queries.
+* Build an interactive Power BI dashboard.
+* Analyze revenue, quantity, orders, products, countries, and sales trends over time.
+
+## Tools & Technologies
+
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
+* T-SQL
+* Microsoft Power BI Desktop
+* DAX
+* Data Modeling and Data Visualization
+
+## Data Warehouse Design
+
+The warehouse follows a Star Schema with one central fact table connected to three dimension tables.
+
+**Fact Table**
 
 * `FactOrderItem`
+
+**Dimension Tables**
+
 * `DimProduct`
 * `DimCustomer`
 * `DimDate`
 
-## Tools Used
+## Dataset Information
 
-* Microsoft Power BI Desktop
-* DAX
-* Data Modeling
-* Interactive Data Visualization
+The project uses e-commerce transaction data containing invoice numbers, product codes, product descriptions, quantities, invoice dates, unit prices, customer IDs, and countries.
 
-## Purpose
+* **Staging Records:** 541,909
+* **Product Records:** 3,958
+* **Customer Records:** 4,372
+* **Date Records:** 305
+* **Fact Records:** 541,909
 
-The goal is to transform warehouse data into meaningful business insights through interactive visualizations and KPI indicators.
+## Power BI Dashboard
+
+The dashboard provides interactive analysis through KPI cards, charts, and slicers.
+
+Key metrics and visualizations include:
+
+* Total Revenue
+* Total Quantity
+* Total Orders
+* Revenue by Country
+* Revenue by Product
+* Revenue Over Time
+* Revenue by Month
+* Date and Country Filters
+
+## Project Structure
+
+* `SQL/` — SQL scripts and data warehouse documentation.
+* `PowerBI/` — Power BI report documentation and dashboard files.
+* `Images/` — Dashboard screenshots and project visuals.
+
+## Key Learning Outcomes
+
+* Understanding ETL and data loading.
+* Designing fact and dimension tables.
+* Implementing a Star Schema.
+* Writing SQL queries for data validation.
+* Creating DAX measures.
+* Building interactive Power BI reports.
+
+## Author
+
+**Mwafg Gomma Ahmed**
+
+This project demonstrates practical skills in data warehousing, SQL, data modeling, and business intelligence using Power BI.
